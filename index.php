@@ -18,6 +18,7 @@
                     <th>Nama Buku</th>
                     <th>Author</th>
                     <th>Jumlah Halaman</th>
+                    <th>Action</th>
                 </tr>
             </thead>
 
@@ -34,6 +35,10 @@
                     <td><?php echo $data['book_name'] ?></td>
                     <td><?php echo $data['author'] ?></td>
                     <td><?php echo $data['pages'] ?></td>
+                    <td>
+                        <a href="delete.php?id=<?php echo $data['id'] ?>"><button class="btn btn-danger">HAPUS</button></a>
+                        <a href="edit.php?id=<?php echo $data['id'] ?>"><button class="btn btn-warning">EDIT</button></a>
+                    </td>
                 </tr>
 
                 <?php } ?>
